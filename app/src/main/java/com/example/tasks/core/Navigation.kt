@@ -5,8 +5,8 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
-import com.example.tasks.ui.Screen.Screen1
-import com.example.tasks.ui.Screen.Screen2
+import com.example.tasks.ui.Screen.Onboarding1
+import com.example.tasks.ui.Screen.Onboarding4
 
 @Composable
 fun Navigation(){
@@ -17,14 +17,24 @@ fun Navigation(){
 
     when(currentScreen){
         Screen.Start -> {
-            Screen1(
+            Onboarding1 (
                 onClick = {
                     currentScreen = Screen.Second
+                },
+                onClick1 = {
+                    currentScreen = Screen.Home
                 }
             )
         }
         Screen.Second -> {
-            Screen2()
+            Onboarding4(
+                onClick = {
+                    currentScreen = Screen.Home
+                },
+                onClick1 = {
+                    currentScreen = Screen.Home
+                }
+            )
         }
         Screen.Home -> {
 

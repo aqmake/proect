@@ -1,5 +1,9 @@
 package com.example.tasks.example
 
+
+
+
+
 class A(){
 
     val num = 4
@@ -26,4 +30,7 @@ fun fuu(
 
 fun Int.sumOneAndOne() : Int{
     return 1 + 1
+
 }
+
+

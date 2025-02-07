@@ -21,6 +21,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -28,8 +29,9 @@ import com.example.tasks.R
 
 @Composable
 
-fun Screen1(
-    onClick: () -> Unit
+fun Onboarding1(
+    onClick: () -> Unit,
+    onClick1: () -> Unit
 ) {
     Column(
         modifier = Modifier.padding(start = 23.dp, end = 23.dp, top = 111.dp)
@@ -42,31 +44,33 @@ fun Screen1(
                 .size(346.dp)
 
         )
+        Spacer(modifier = Modifier.size(48.dp))
         Column(
             horizontalAlignment = Alignment.CenterHorizontally,
-            verticalArrangement = Arrangement.Center,
             modifier = Modifier
                 .fillMaxSize()
         ) {
-            Box(modifier = Modifier.size(297.dp, 58.dp)) {
+
                 Text(
                     text = "Quick Delivery At Your Doorstep",
                     color = Color(0xff0560FA),
                     fontSize = 24.sp,
                     lineHeight = 24.sp,
-                    textAlign = TextAlign.Center
+                    textAlign = TextAlign.Center,
+                    minLines = 2
                 )
 
-            }
-            Box(modifier = Modifier.size(281.dp,50.dp)){
+
+
                 Text(
-                    text = "Enjoy quick pick-up and delivery to your destination",
+                    text = "Enjoy quick pick-up and delivery to your  destination",
                     color = Color(0xff3A3A3A),
                     fontSize = 16.sp,
                     lineHeight = 20.sp,
-                    textAlign = TextAlign.Center
+                    textAlign = TextAlign.Center,
+                    minLines = 2,
+
                 )
-            }
             Spacer(modifier = Modifier.size(82.dp))
             Row(
                 horizontalArrangement = Arrangement.SpaceBetween,
@@ -81,7 +85,7 @@ fun Screen1(
                         .border(width = 1.dp, color = Color.Blue, shape = RoundedCornerShape(5.dp))
                         .clip(shape = RoundedCornerShape(5.dp))
                         .clickable {
-
+                            onClick1()
                         }
                 ) {
                     Text(text = "Skip",
