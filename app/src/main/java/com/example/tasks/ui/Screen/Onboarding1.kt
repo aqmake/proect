@@ -50,25 +50,20 @@ fun Onboarding1(
             modifier = Modifier
                 .fillMaxSize()
         ) {
+            Text(
+                text = "Quick Delivery At Your \n Doorstep",
+                color = Color(0xff0560FA),
+                fontSize = 24.sp,
+                lineHeight = 24.sp,
+                textAlign = TextAlign.Center
+            )
 
-                Text(
-                    text = "Quick Delivery At Your Doorstep",
-                    color = Color(0xff0560FA),
-                    fontSize = 24.sp,
-                    lineHeight = 24.sp,
-                    textAlign = TextAlign.Center,
-                    minLines = 2
-                )
-
-
-
-                Text(
-                    text = "Enjoy quick pick-up and delivery to your  destination",
-                    color = Color(0xff3A3A3A),
-                    fontSize = 16.sp,
-                    lineHeight = 20.sp,
-                    textAlign = TextAlign.Center,
-                    minLines = 2,
+            Text(
+                text = "Enjoy quick pick-up and delivery to \n your destination",
+                color = Color(0xff3A3A3A),
+                fontSize = 16.sp,
+                lineHeight = 20.sp,
+                textAlign = TextAlign.Center,
 
                 )
             Spacer(modifier = Modifier.size(82.dp))
@@ -81,29 +76,32 @@ fun Onboarding1(
                     contentAlignment = Alignment.Center,
                     modifier = Modifier
                         .size(100.dp, 50.dp)
-                        .background(Color(0xffFFFFFF),shape = RoundedCornerShape(5.dp))
+                        .background(Color(0xffFFFFFF), shape = RoundedCornerShape(5.dp))
                         .border(width = 1.dp, color = Color.Blue, shape = RoundedCornerShape(5.dp))
                         .clip(shape = RoundedCornerShape(5.dp))
                         .clickable {
                             onClick1()
                         }
                 ) {
-                    Text(text = "Skip",
-                        color = Color(0xff0560FA))
+                    Text(
+                        text = "Skip",
+                        color = Color(0xff0560FA)
+                    )
                 }
                 Box(
                     contentAlignment = Alignment.Center,
                     modifier = Modifier
                         .size(100.dp, 50.dp)
                         .background(Color(0xff0560FA), shape = RoundedCornerShape(5.dp))
-                        .border(width = 1.dp, color = Color.Blue, shape = RoundedCornerShape(5.dp))
                         .clip(shape = RoundedCornerShape(5.dp))
                         .clickable {
                             onClick()
                         }
                 ) {
-                    Text(text = "Next",
-                        color = Color(0xffFFFFFF))
+                    Text(
+                        text = "Next",
+                        color = Color(0xffFFFFFF)
+                    )
                 }
             }
         }

@@ -13,7 +13,9 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Button
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -30,12 +32,13 @@ import com.example.tasks.R
 
 @Composable
 fun Onboarding4(
-    onClick : () -> Unit,
-    onClick1 : () -> Unit
+    onClick: () -> Unit,
+    onClick1: () -> Unit
 
 ) {
     Column(
-        modifier = Modifier.padding(start = 23.dp, end = 23.dp, top = 133.dp)
+        modifier = Modifier
+            .padding(start = 23.dp, end = 23.dp, top = 133.dp)
     ) {
         Image(
             painter = painterResource(R.drawable.a2),
@@ -54,17 +57,17 @@ fun Onboarding4(
                 text = "Flexible Payment",
                 color = Color(0xff0560FA),
                 lineHeight = 24.sp,
-                fontSize = 24.sp
+                fontSize = 24.sp,
+                textAlign = TextAlign.Center
             )
-            Box(modifier = Modifier.size(281.dp,80.dp)){
-                Text(
-                    text = "Different modes of payment either before and after delivery without stress",
-                    color = Color(0xff3A3A3A),
-                    lineHeight = 20.sp,
-                    fontSize = 16.sp,
-                    textAlign = TextAlign.Center
-                )
-            }
+
+            Text(
+                text = "Different modes of payment either \n before and after delivery without stress",
+                color = Color(0xff3A3A3A),
+                lineHeight = 20.sp,
+                fontSize = 16.sp,
+                textAlign = TextAlign.Center
+            )
             Spacer(modifier = Modifier.size(82.dp))
             Row(
                 horizontalArrangement = Arrangement.SpaceBetween,
@@ -92,7 +95,6 @@ fun Onboarding4(
                     modifier = Modifier
                         .size(100.dp, 50.dp)
                         .background(Color(0xff0560FA), shape = RoundedCornerShape(5.dp))
-                        .border(width = 1.dp, color = Color.Blue, shape = RoundedCornerShape(5.dp))
                         .clip(shape = RoundedCornerShape(5.dp))
                         .clickable {
                             onClick()
